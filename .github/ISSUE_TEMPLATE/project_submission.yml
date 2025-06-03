@@ -1,0 +1,145 @@
+name: 📚 Project Submission
+description: Submit a new project to be added to the repository
+title: "[PROJECT] "
+labels: ["project-submission", "needs-review"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a project! 🚀 Please fill out the information below.
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: What is the name of your project?
+      placeholder: e.g., "Real-time Chat Application"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this project belong to?
+      options:
+        - Beginner Projects
+        - Web Development
+        - Mobile Development
+        - Machine Learning & AI
+        - Backend & APIs
+        - Game Development
+        - Cybersecurity
+        - Database Projects
+        - Cloud & DevOps
+        - Blockchain
+        - Desktop Applications
+        - Data Science & Analytics
+        - IoT Projects
+        - Algorithm Visualizers
+        - Advanced Projects
+        - Academic Projects
+        - Competition Projects
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Project Description
+      description: Provide a clear and compelling description (max 100 characters for the main description)
+      placeholder: Brief description that will appear in the list
+    validations:
+      required: true
+
+  - type: input
+    id: tech-stack
+    attributes:
+      label: Tech Stack
+      description: List the technologies used in this project
+      placeholder: e.g., "React, Node.js, Socket.io, MongoDB"
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills Learned
+      description: What key skills do students learn from this project?
+      placeholder: List the technical and soft skills gained
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      description: How difficult is this project?
+      options:
+        - "⭐ Beginner"
+        - "⭐⭐ Easy"
+        - "⭐⭐⭐ Intermediate"
+        - "⭐⭐⭐⭐ Advanced"
+        - "⭐⭐⭐⭐⭐ Expert"
+    validations:
+      required: true
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository Link (Optional)
+      description: Link to the project repository if available
+      placeholder: https://github.com/username/project-name
+
+  - type: input
+    id: tutorial
+    attributes:
+      label: Tutorial Link (Optional)
+      description: Link to a tutorial or guide for building this project
+      placeholder: https://example.com/tutorial
+
+  - type: input
+    id: demo
+    attributes:
+      label: Demo Link (Optional)
+      description: Link to a live demo of the project
+      placeholder: https://project-demo.com
+
+  - type: input
+    id: estimated-time
+    attributes:
+      label: Estimated Time to Complete
+      description: How long does it take to complete this project?
+      placeholder: e.g., "2-3 weeks", "1 month", "3-5 days"
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites (Optional)
+      description: What knowledge or tools are needed before starting this project?
+      placeholder: Programming languages, frameworks, or concepts students should know
+
+  - type: textarea
+    id: learning-outcomes
+    attributes:
+      label: Learning Outcomes (Optional)
+      description: What will students be able to do after completing this project?
+      placeholder: Specific abilities or knowledge gained
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following
+      options:
+        - label: This project is educational and beneficial for CSE students
+          required: true
+        - label: I have checked that this project doesn't already exist in the repository
+          required: true
+        - label: The project follows appropriate difficulty classification
+          required: true
+        - label: I have permission to share any linked resources
+          required: true
+        - label: The project promotes good coding practices and learning
+          required: true

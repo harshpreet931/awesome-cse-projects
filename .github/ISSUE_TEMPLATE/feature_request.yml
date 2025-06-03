@@ -1,0 +1,121 @@
+name: ✨ Feature Request
+description: Suggest a new project or feature for the repository
+title: "[FEATURE] "
+labels: ["enhancement", "feature-request"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new project or feature! 🚀
+
+  - type: dropdown
+    id: project-category
+    attributes:
+      label: Project Category
+      description: Which category does this project belong to?
+      options:
+        - Beginner Projects
+        - Web Development
+        - Mobile Development
+        - Machine Learning & AI
+        - Backend & APIs
+        - Game Development
+        - Cybersecurity
+        - Database Projects
+        - Cloud & DevOps
+        - Blockchain
+        - Desktop Applications
+        - Data Science & Analytics
+        - IoT Projects
+        - Algorithm Visualizers
+        - Advanced Projects
+        - Academic Projects
+        - Competition Projects
+        - New Category (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: What would you call this project?
+      placeholder: e.g., "AI-Powered Code Review Tool"
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-description
+    attributes:
+      label: Project Description
+      description: Provide a clear and detailed description of the project
+      placeholder: Describe what the project does, its main features, and why it's valuable for CSE students
+    validations:
+      required: true
+
+  - type: input
+    id: tech-stack
+    attributes:
+      label: Suggested Tech Stack
+      description: What technologies would be used to build this project?
+      placeholder: e.g., "React, Node.js, MongoDB, TensorFlow"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      description: How difficult would this project be for students?
+      options:
+        - "⭐ Beginner"
+        - "⭐⭐ Easy"
+        - "⭐⭐⭐ Intermediate"
+        - "⭐⭐⭐⭐ Advanced"
+        - "⭐⭐⭐⭐⭐ Expert"
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills-learned
+    attributes:
+      label: Skills Students Would Learn
+      description: What key skills would students gain from this project?
+      placeholder: List the technical and soft skills students would develop
+    validations:
+      required: true
+
+  - type: input
+    id: estimated-time
+    attributes:
+      label: Estimated Time to Complete
+      description: How long would it take to complete this project?
+      placeholder: e.g., "2-3 weeks", "1 month", "1-2 days"
+
+  - type: textarea
+    id: learning-resources
+    attributes:
+      label: Learning Resources (Optional)
+      description: Any tutorials, documentation, or resources that would help students build this project?
+      placeholder: Links to tutorials, documentation, or similar projects
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would be helpful?
+      placeholder: Why is this project important? What real-world problems does it solve?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing projects to ensure this isn't a duplicate
+          required: true
+        - label: This project would be educational and beneficial for CSE students
+          required: true
+        - label: I would be willing to help create documentation/tutorials for this project
+          required: false

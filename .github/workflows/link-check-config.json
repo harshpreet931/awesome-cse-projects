@@ -1,0 +1,36 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://img.shields.io"
+    },
+    {
+      "pattern": "^https://github.com/harshpreet931"
+    },
+    {
+      "pattern": "^mailto:"
+    },
+    {
+      "pattern": "^https://twitter.com"
+    },
+    {
+      "pattern": "^https://contrib.rocks"
+    },
+    {
+      "pattern": "^https://github-readme-stats.vercel.app"
+    }
+  ],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackHttpStatus": [
+    400,
+    401,
+    403,
+    404,
+    405,
+    500,
+    502,
+    503,
+    504
+  ]
+}

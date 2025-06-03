@@ -1,0 +1,59 @@
+{
+  "name": "awesome-cse-projects",
+  "version": "1.0.0",
+  "description": "A curated list of awesome Computer Science & Engineering projects for students",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "markdownlint *.md",
+    "link-check": "markdown-link-check README.md",
+    "build": "node scripts/build-website.js",
+    "dev": "node scripts/dev-server.js",
+    "validate": "node scripts/validate-projects.js",
+    "generate": "node scripts/project-generator.js",
+    "assess": "node scripts/skill-assessment.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "npm run dev",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint && npm run validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshpreet931/awesome-cse-projects.git"
+  },
+  "keywords": [
+    "computer-science",
+    "engineering",
+    "projects",
+    "programming",
+    "students",
+    "learning",
+    "portfolio",
+    "awesome",
+    "education",
+    "coding"
+  ],
+  "author": "Harshpreet Singh <harshpreet931@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshpreet931/awesome-cse-projects/issues"
+  },
+  "homepage": "https://harshpreet931.github.io/awesome-cse-projects",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "chokidar": "^3.5.3",
+    "express": "^4.18.2",
+    "gh-pages": "^6.3.0",
+    "jest": "^29.7.0",
+    "markdown-link-check": "^3.11.2",
+    "markdownlint-cli": "^0.37.0",
+    "marked": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}

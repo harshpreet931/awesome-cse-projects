@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Finder - Awesome CSE Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .filters {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        select, input {
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .difficulty-filter {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .difficulty-btn {
+            padding: 8px 16px;
+            border: 2px solid #e1e8ed;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .difficulty-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .tech-tag, .difficulty-tag, .category-tag {
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .difficulty-tag {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .category-tag {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-link {
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: #5a6fd8;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            color: #666;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Project Finder</h1>
+            <p class="subtitle">Find the perfect project for your skill level and interests</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalProjects">100+</div>
+                <div class="stat-label">Total Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">17</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Tech Stacks</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label for="category">📂 Category</label>
+                    <select id="category">
+                        <option value="">All Categories</option>
+                        <option value="web">🌐 Web Development</option>
+                        <option value="mobile">📱 Mobile Development</option>
+                        <option value="ai">🤖 AI/Machine Learning</option>
+                        <option value="backend">🔧 Backend & APIs</option>
+                        <option value="game">🎮 Game Development</option>
+                        <option value="security">🔒 Cybersecurity</option>
+                        <option value="blockchain">🔗 Blockchain</option>
+                        <option value="data">📊 Data Science</option>
+                        <option value="iot">🌐 IoT Projects</option>
+                        <option value="desktop">🖥️ Desktop Apps</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="tech">⚡ Technology</label>
+                    <select id="tech">
+                        <option value="">All Technologies</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="react">React</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="flutter">Flutter</option>
+                        <option value="java">Java</option>
+                        <option value="tensorflow">TensorFlow</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="docker">Docker</option>
+                        <option value="aws">AWS</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="time">⏱️ Time to Complete</label>
+                    <select id="time">
+                        <option value="">Any Duration</option>
+                        <option value="1-3">1-3 days</option>
+                        <option value="1-2">1-2 weeks</option>
+                        <option value="1">1 month</option>
+                        <option value="3">3+ months</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="search">🔍 Search</label>
+                    <input type="text" id="search" placeholder="Search projects...">
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <label>⭐ Difficulty Level</label>
+                <div class="difficulty-filter">
+                    <button class="difficulty-btn" data-difficulty="">All Levels</button>
+                    <button class="difficulty-btn" data-difficulty="1">⭐ Beginner</button>
+                    <button class="difficulty-btn" data-difficulty="2">⭐⭐ Easy</button>
+                    <button class="difficulty-btn" data-difficulty="3">⭐⭐⭐ Medium</button>
+                    <button class="difficulty-btn" data-difficulty="4">⭐⭐⭐⭐ Hard</button>
+                    <button class="difficulty-btn" data-difficulty="5">⭐⭐⭐⭐⭐ Expert</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be populated by JavaScript -->
+        </div>
+        
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>🔍 No projects found</h3>
+            <p>Try adjusting your filters or search terms</p>
+        </div>
+    </div>
+
+    <script>
+        // Sample project data - In real implementation, this would come from an API
+        const projects = [
+            {
+                title: "🌦️ Weather Dashboard",
+                description: "Real-time weather app with beautiful UI, location-based forecasts, and interactive charts.",
+                category: "web",
+                difficulty: 2,
+                tech: ["javascript", "react", "apis"],
+                time: "1-2",
+                links: {
+                    github: "#",
+                    demo: "#",
+                    tutorial: "#"
+                }
+            },
+            {
+                title: "🤖 AI Chatbot",
+                description: "Intelligent conversational agent using natural language processing and machine learning.",
+                category: "ai",
+                difficulty: 4,
+                tech: ["python", "tensorflow", "nlp"],
+                time: "1",
+                links: {
+                    github: "#",
+                    tutorial: "#"
+                }
+            },
+            {
+                title: "📱 Expense Tracker",
+                description: "Mobile app to track expenses with categories, budgets, and spending analytics.",
+                category: "mobile",
+                difficulty: 3,
+                tech: ["flutter", "dart", "firebase"],
+                time: "1-2",
+                links: {
+                    github: "#",
+                    demo: "#"
+                }
+            },
+            {
+                title: "🔐 Password Manager",
+                description: "Secure password storage with encryption, auto-generation, and browser integration.",
+                category: "security",
+                difficulty: 4,
+                tech: ["python", "cryptography", "electron"],
+                time: "3",
+                links: {
+                    github: "#",
+                    tutorial: "#"
+                }
+            },
+            {
+                title: "🎮 2D Platformer Game",
+                description: "Classic side-scrolling game with physics, enemies, power-ups, and level progression.",
+                category: "game",
+                difficulty: 3,
+                tech: ["javascript", "canvas", "phaser"],
+                time: "1",
+                links: {
+                    github: "#",
+                    demo: "#"
+                }
+            },
+            {
+                title: "💰 Cryptocurrency Tracker",
+                description: "Real-time crypto prices, portfolio tracking, and price alerts with beautiful charts.",
+                category: "web",
+                difficulty: 2,
+                tech: ["react", "nodejs", "mongodb"],
+                time: "1-2",
+                links: {
+                    github: "#",
+                    demo: "#",
+                    tutorial: "#"
+                }
+            },
+            {
+                title: "🏠 Smart Home System",
+                description: "IoT project controlling lights, temperature, and security with mobile app interface.",
+                category: "iot",
+                difficulty: 5,
+                tech: ["python", "raspberry-pi", "mqtt"],
+                time: "3",
+                links: {
+                    github: "#",
+                    tutorial: "#"
+                }
+            },
+            {
+                title: "📊 Data Visualization Dashboard",
+                description: "Interactive dashboard with real-time data, multiple chart types, and filtering options.",
+                category: "data",
+                difficulty: 3,
+                tech: ["python", "plotly", "pandas"],
+                time: "1-2",
+                links: {
+                    github: "#",
+                    demo: "#"
+                }
+            }
+        ];
+
+        let filteredProjects = [...projects];
+
+        // DOM elements
+        const categorySelect = document.getElementById('category');
+        const techSelect = document.getElementById('tech');
+        const timeSelect = document.getElementById('time');
+        const searchInput = document.getElementById('search');
+        const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+        const projectsGrid = document.getElementById('projectsGrid');
+        const noResults = document.getElementById('noResults');
+        const totalProjectsSpan = document.getElementById('totalProjects');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProjects(projects);
+            setupEventListeners();
+        });
+
+        function setupEventListeners() {
+            categorySelect.addEventListener('change', filterProjects);
+            techSelect.addEventListener('change', filterProjects);
+            timeSelect.addEventListener('change', filterProjects);
+            searchInput.addEventListener('input', filterProjects);
+            
+            difficultyButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    difficultyButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProjects();
+                });
+            });
+        }
+
+        function filterProjects() {
+            const category = categorySelect.value;
+            const tech = techSelect.value.toLowerCase();
+            const time = timeSelect.value;
+            const search = searchInput.value.toLowerCase();
+            const difficulty = document.querySelector('.difficulty-btn.active')?.dataset.difficulty || '';
+
+            filteredProjects = projects.filter(project => {
+                const matchesCategory = !category || project.category === category;
+                const matchesTech = !tech || project.tech.some(t => t.includes(tech));
+                const matchesTime = !time || project.time === time;
+                const matchesSearch = !search || 
+                    project.title.toLowerCase().includes(search) ||
+                    project.description.toLowerCase().includes(search);
+                const matchesDifficulty = !difficulty || project.difficulty.toString() === difficulty;
+
+                return matchesCategory && matchesTech && matchesTime && matchesSearch && matchesDifficulty;
+            });
+
+            renderProjects(filteredProjects);
+        }
+
+        function renderProjects(projectsToRender) {
+            if (projectsToRender.length === 0) {
+                projectsGrid.style.display = 'none';
+                noResults.style.display = 'block';
+                totalProjectsSpan.textContent = '0';
+                return;
+            }
+
+            projectsGrid.style.display = 'grid';
+            noResults.style.display = 'none';
+            totalProjectsSpan.textContent = projectsToRender.length;
+
+            projectsGrid.innerHTML = projectsToRender.map(project => `
+                <div class="project-card">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    
+                    <div class="project-meta">
+                        <span class="difficulty-tag">${'⭐'.repeat(project.difficulty)} ${getDifficultyLabel(project.difficulty)}</span>
+                        <span class="category-tag">${getCategoryLabel(project.category)}</span>
+                        ${project.tech.slice(0, 3).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+                    
+                    <div class="project-links">
+                        ${project.links.github ? `<a href="${project.links.github}" class="project-link">📱 GitHub</a>` : ''}
+                        ${project.links.demo ? `<a href="${project.links.demo}" class="project-link">🚀 Demo</a>` : ''}
+                        ${project.links.tutorial ? `<a href="${project.links.tutorial}" class="project-link">📖 Tutorial</a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getDifficultyLabel(difficulty) {
+            const labels = {
+                1: 'Beginner',
+                2: 'Easy',
+                3: 'Medium',
+                4: 'Hard',
+                5: 'Expert'
+            };
+            return labels[difficulty] || 'Unknown';
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                web: '🌐 Web Dev',
+                mobile: '📱 Mobile',
+                ai: '🤖 AI/ML',
+                backend: '🔧 Backend',
+                game: '🎮 Game Dev',
+                security: '🔒 Security',
+                blockchain: '🔗 Blockchain',
+                data: '📊 Data Science',
+                iot: '🌐 IoT',
+                desktop: '🖥️ Desktop'
+            };
+            return labels[category] || category;
+        }
+
+        // Initialize with first difficulty button active
+        document.querySelector('.difficulty-btn').classList.add('active');
+    </script>
+</body>
+</html>

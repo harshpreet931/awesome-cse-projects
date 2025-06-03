@@ -1,0 +1,5 @@
+# Issue Template Configuration
+blank_issues_enabled: false
+contact_links:
+  - name: Project Submission
+    url: https://github.com/harshpreet931/awesome-cse-projects/issues/new?assignees=&labels=project-suggestion&template=project_submission.yml&title=Project+Suggestion:+
