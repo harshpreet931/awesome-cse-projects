@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Awesome CSE Projects</title>
+    <meta name="description" content="A curated list of awesome Computer Science & Engineering projects for students, developers, and enthusiasts.">
+    <meta name="keywords" content="computer science, engineering, projects, programming, coding, students, portfolio, awesome">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harshpreet931.github.io/awesome-cse-projects/">
+    <meta property="og:title" content="🚀 Awesome CSE Projects">
+    <meta property="og:description" content="A curated list of awesome Computer Science & Engineering projects for students">
+    <meta property="og:image" content="https://harshpreet931.github.io/awesome-cse-projects/assets/banner.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://harshpreet931.github.io/awesome-cse-projects/">
+    <meta property="twitter:title" content="🚀 Awesome CSE Projects">
+    <meta property="twitter:description" content="A curated list of awesome Computer Science & Engineering projects for students">
+    <meta property="twitter:image" content="https://harshpreet931.github.io/awesome-cse-projects/assets/banner.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <!-- GitHub Markdown CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown-dark.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #21262d;
+            --hover-bg: #161b22;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .markdown-body {
+            background: transparent;
+            color: var(--text-color);
+            border: none;
+            max-width: none;
+        }
+        
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4 {
+            color: var(--accent-color);
+            border-bottom-color: var(--border-color);
+        }
+        
+        .markdown-body a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .markdown-body a:hover {
+            text-decoration: underline;
+        }
+        
+        .markdown-body code {
+            background: var(--border-color);
+            color: #f85149;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+        
+        .markdown-body pre {
+            background: var(--border-color);
+            border-radius: 6px;
+        }
+        
+        .markdown-body blockquote {
+            border-left-color: var(--accent-color);
+            color: #8b949e;
+        }
+        
+        .markdown-body table {
+            border-collapse: collapse;
+        }
+        
+        .markdown-body table th,
+        .markdown-body table td {
+            border-color: var(--border-color);
+            padding: 12px;
+        }
+        
+        .markdown-body table th {
+            background: var(--hover-bg);
+        }
+        
+        .markdown-body table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 20px;
+            z-index: 1000;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            background: #1f6feb;
+            transform: translateY(-2px);
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: var(--accent-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .markdown-body {
+                font-size: 14px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .back-to-top {
+                display: none;
+            }
+            
+            .markdown-body a {
+                color: black;
+                text-decoration: underline;
+            }
+        }
+    </style>
+    
+    <!-- Analytics -->
+    <!-- Add your analytics code here -->
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Awesome CSE Projects",
+        "description": "A curated list of awesome Computer Science & Engineering projects for students",
+        "url": "https://harshpreet931.github.io/awesome-cse-projects/",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name"
+        },
+        "programmingLanguage": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++",
+            "Go",
+            "Rust"
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Computer Science Students"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <article class="markdown-body">
+            <h1>Awesome CSE Projects <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a> <a href="https://github.com/harshpreet931/awesome-cse-projects"><img src="https://img.shields.io/github/stars/harshpreet931/awesome-cse-projects?style=social" alt="GitHub Stars"></a><a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a> <a href="CHANGELOG.md"><img src="https://img.shields.io/github/v/release/harshpreet931/awesome-cse-projects" alt="Version"></a> <a href="CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/code%20of%20conduct-adopted-blue.svg" alt="Code of Conduct"></a> <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-up--to--date-green.svg" alt="Changelog"></a></h1>
+<blockquote>
+<p> <strong>The Ultimate Collection</strong> of Computer Science &amp; Engineering projects - curated for students, developers, and tech enthusiasts. From beginner-friendly tutorials to advanced research projects across <strong>17+ domains</strong> with <strong>100+ project ideas</strong>.</p>
+</blockquote>
+<div align="center">
+  <img src="https://img.shields.io/badge/💻%20Projects-100+-ff6b6b?style=for-the-badge" alt="Projects Count">
+  <img src="https://img.shields.io/badge/🏷️%20Categories-17+-4ecdc4?style=for-the-badge" alt="Categories">
+  <img src="https://img.shields.io/badge/📈%20Difficulty-Beginner%20to%20Expert-45b7d1?style=for-the-badge" alt="Difficulty Range">
+  <img src="https://img.shields.io/badge/🔄%20Updated-Weekly-96ceb4?style=for-the-badge" alt="Update Frequency">
+
+</div>
+
+<div align="center">
+  <h3>🚀 <a href="#quick-start">Quick Start</a> • 📖 <a href="#learning-paths">Learning Paths</a> • 🎯 <a href="#project-finder">Project Finder</a> • 🏆 <a href="#showcase">Showcase</a></h3>
+</div>
+
+<hr>
+<h2>What Makes This Special?</h2>
+<table>
+<tr>
+<td width="33%" align="center">
+
+<h4><strong>Curated Excellence</strong></h4>
+<p>Handpicked projects with <strong>clear difficulty ratings</strong>, comprehensive tech stacks, and skills mapping</p>
+</td>
+<td width="33%" align="center">
+
+<h4><strong>Progressive Learning</strong></h4>
+<p>Structured paths from <strong>beginner to expert</strong> with interconnected project sequences</p>
+</td>
+<td width="33%" align="center">
+
+<h4><strong>Real-World Impact</strong></h4>
+<p>Projects that solve actual problems and build impressive portfolios</p>
+</td>
+</tr>
+</table>
+
+<h2>📊 Quick Stats</h2>
+<div align="center">
+  
+<table>
+<thead>
+<tr>
+<th>📈 <strong>Metric</strong></th>
+<th>📊 <strong>Count</strong></th>
+<th>🎯 <strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🚀 <strong>Total Projects</strong></td>
+<td>100+</td>
+<td>Carefully curated and categorized</td>
+</tr>
+<tr>
+<td>🏷️ <strong>Categories</strong></td>
+<td>17+</td>
+<td>From Web Dev to AI/ML to Blockchain</td>
+</tr>
+<tr>
+<td>⭐ <strong>Difficulty Levels</strong></td>
+<td>5</td>
+<td>Beginner (⭐) to Expert (⭐⭐⭐⭐⭐)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Tech Stacks</strong></td>
+<td>50+</td>
+<td>Modern technologies and frameworks</td>
+</tr>
+<tr>
+<td>📚 <strong>Learning Paths</strong></td>
+<td>6</td>
+<td>Structured career development tracks</td>
+</tr>
+</tbody></table>
+</div>
+
+<h2>Quick Start</h2>
+<h3>Project Finder Tool</h3>
+<p><strong>Find the perfect project for your skill level and interests:</strong></p>
+<details>
+<summary>🔰 <strong>Beginner Projects</strong> (⭐) - New to programming</summary>
+
+<ul>
+<li><a href="#-beginner-projects">Calculator App</a> - Perfect first GUI project</li>
+<li><a href="#-beginner-projects">To-Do List Manager</a> - Learn CRUD operations</li>
+<li><a href="#-beginner-projects">Number Guessing Game</a> - Practice logic and loops</li>
+</ul>
+</details>
+
+<details>
+<summary>🚀 <strong>Intermediate Projects</strong> (⭐⭐⭐) - Ready for challenges</summary>
+
+<ul>
+<li><a href="#-web-development">Weather Dashboard</a> - API integration + responsive design</li>
+<li><a href="#-web-development">Chat Application</a> - Real-time communication</li>
+<li><a href="#-mobile-development">Expense Tracker</a> - Mobile app development</li>
+</ul>
+</details>
+
+<details>
+<summary>🎓 <strong>Advanced Projects</strong> (⭐⭐⭐⭐⭐) - Expert level</summary>
+
+<ul>
+<li><a href="#-advanced-projects">Distributed File System</a> - System design mastery</li>
+<li><a href="#-machine-learning--ai">AI Music Generation</a> - Deep learning expertise</li>
+<li><a href="#-blockchain">Blockchain Network</a> - Cryptocurrency development</li>
+</ul>
+</details>
+
+<h3>Choose Your Learning Path</h3>
+<table>
+<thead>
+<tr>
+<th>🎯 <strong>Career Track</strong></th>
+<th>📚 <strong>Projects</strong></th>
+<th>⏱️ <strong>Timeline</strong></th>
+<th>🎯 <strong>Goal</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="LEARNING_PATHS.md#full-stack">🌐 <strong>Full-Stack Developer</strong></a></td>
+<td>12 projects</td>
+<td>6 months</td>
+<td>Complete web applications</td>
+</tr>
+<tr>
+<td><a href="LEARNING_PATHS.md#mobile">📱 <strong>Mobile Developer</strong></a></td>
+<td>10 projects</td>
+<td>4 months</td>
+<td>iOS/Android expertise</td>
+</tr>
+<tr>
+<td><a href="LEARNING_PATHS.md#ai-ml">🤖 <strong>AI/ML Engineer</strong></a></td>
+<td>15 projects</td>
+<td>8 months</td>
+<td>Machine learning mastery</td>
+</tr>
+<tr>
+<td><a href="LEARNING_PATHS.md#devops">☁️ <strong>DevOps Engineer</strong></a></td>
+<td>8 projects</td>
+<td>5 months</td>
+<td>Cloud &amp; automation</td>
+</tr>
+<tr>
+<td><a href="LEARNING_PATHS.md#security">🔒 <strong>Cybersecurity</strong></a></td>
+<td>10 projects</td>
+<td>6 months</td>
+<td>Security expertise</td>
+</tr>
+<tr>
+<td><a href="LEARNING_PATHS.md#data-science">📊 <strong>Data Scientist</strong></a></td>
+<td>12 projects</td>
+<td>7 months</td>
+<td>Data analysis &amp; ML</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#-beginner-projects">🎯 Beginner Projects</a></li>
+<li><a href="#-web-development">🔧 Web Development</a></li>
+<li><a href="#-mobile-development">📱 Mobile Development</a></li>
+<li><a href="#-machine-learning--ai">🤖 Machine Learning &amp; AI</a></li>
+<li><a href="#-backend--apis">🌐 Backend &amp; APIs</a></li>
+<li><a href="#-game-development">🎮 Game Development</a></li>
+<li><a href="#-cybersecurity">🔒 Cybersecurity</a></li>
+<li><a href="#%EF%B8%8F-database-projects">🗄️ Database Projects</a></li>
+<li><a href="#%EF%B8%8F-cloud--devops">☁️ Cloud &amp; DevOps</a></li>
+<li><a href="#-blockchain">🔗 Blockchain</a></li>
+<li><a href="#%EF%B8%8F-desktop-applications">🖥️ Desktop Applications</a></li>
+<li><a href="#-data-science--analytics">📊 Data Science &amp; Analytics</a></li>
+<li><a href="#-iot-projects">🌐 IoT Projects</a></li>
+<li><a href="#-algorithm-visualizers">🧠 Algorithm Visualizers</a></li>
+<li><a href="#-advanced-projects">📈 Advanced Projects</a></li>
+<li><a href="#-academic-projects">🎓 Academic Projects</a></li>
+<li><a href="#-competition-projects">🏆 Competition Projects</a></li>
+<li><a href="#how-to-contribute">📝 How to Contribute</a></li>
+<li><a href="#license">📜 License</a></li>
+<li><a href="#security">🔒 Security</a></li>
+<li><a href="#changelog">📖 Changelog</a></li>
+</ul>
+<hr>
+<h2>🎯 Beginner Projects</h2>
+<h3>Programming Fundamentals</h3>
+<ul>
+<li><p><strong>🔢 Calculator App</strong> - Simple GUI calculator with basic operations</p>
+<ul>
+<li><em>Tech Stack</em>: Python (Tkinter), Java (Swing), or Web (HTML/CSS/JS)</li>
+<li><em>Skills</em>: Basic programming, UI design, event handling</li>
+<li><em>Difficulty</em>: ⭐</li>
+</ul>
+</li>
+<li><p><strong>📝 To-Do List Manager</strong> - Task management application</p>
+<ul>
+<li><em>Tech Stack</em>: Any programming language</li>
+<li><em>Skills</em>: CRUD operations, local storage, user interface</li>
+<li><em>Difficulty</em>: ⭐</li>
+</ul>
+</li>
+<li><p><strong>🎲 Number Guessing Game</strong> - Interactive guessing game with hints</p>
+<ul>
+<li><em>Tech Stack</em>: Python, Java, C++, or JavaScript</li>
+<li><em>Skills</em>: Loops, conditionals, random number generation</li>
+<li><em>Difficulty</em>: ⭐</li>
+</ul>
+</li>
+<li><p><strong>🌡️ Unit Converter</strong> - Convert between different units (temperature, length, weight)</p>
+<ul>
+<li><em>Tech Stack</em>: Any language with GUI framework</li>
+<li><em>Skills</em>: Mathematical calculations, user input validation</li>
+<li><em>Difficulty</em>: ⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Text Processing</h3>
+<ul>
+<li><p><strong>📊 Word Counter</strong> - Analyze text files for word frequency, character count</p>
+<ul>
+<li><em>Tech Stack</em>: Python, Java, or C++</li>
+<li><em>Skills</em>: File I/O, string manipulation, data structures</li>
+<li><em>Difficulty</em>: ⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🔍 Text Search Tool</strong> - Find and highlight specific patterns in text</p>
+<ul>
+<li><em>Tech Stack</em>: Python (regex), Java, or C++</li>
+<li><em>Skills</em>: Regular expressions, pattern matching</li>
+<li><em>Difficulty</em>: ⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔧 Web Development</h2>
+<h3>Frontend Projects</h3>
+<ul>
+<li><p><strong>🌟 Personal Portfolio Website</strong> - Responsive showcase of your work</p>
+<ul>
+<li><em>Tech Stack</em>: HTML5, CSS3, JavaScript, React/Vue</li>
+<li><em>Skills</em>: Responsive design, CSS animations, modern JS</li>
+<li><em>Difficulty</em>: ⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🛒 E-commerce Store</strong> - Full-featured online shopping platform</p>
+<ul>
+<li><em>Tech Stack</em>: React/Vue, Node.js, MongoDB/PostgreSQL</li>
+<li><em>Skills</em>: State management, payment integration, user authentication</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>📰 News Aggregator</strong> - Real-time news from multiple sources</p>
+<ul>
+<li><em>Tech Stack</em>: React, News APIs, Material-UI/Tailwind CSS</li>
+<li><em>Skills</em>: API integration, responsive design, state management</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Full-Stack Applications</h3>
+<ul>
+<li><p><strong>💬 Real-time Chat Application</strong> - Multi-user chat with rooms</p>
+<ul>
+<li><em>Tech Stack</em>: React, Node.js, Socket.io, MongoDB</li>
+<li><em>Skills</em>: WebSocket programming, real-time communication</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>📋 Project Management Tool</strong> - Kanban-style task management</p>
+<ul>
+<li><em>Tech Stack</em>: React/Angular, Node.js, PostgreSQL, Redis</li>
+<li><em>Skills</em>: Drag-and-drop UI, database design, caching</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>📱 Mobile Development</h2>
+<h3>Native Apps</h3>
+<ul>
+<li><p><strong>📸 Photo Gallery App</strong> - Organize and edit photos with filters</p>
+<ul>
+<li><em>Tech Stack</em>: Swift (iOS), Kotlin (Android), or React Native</li>
+<li><em>Skills</em>: Image processing, local storage, camera integration</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🏃‍♂️ Fitness Tracker</strong> - Track workouts, calories, and progress</p>
+<ul>
+<li><em>Tech Stack</em>: Flutter, React Native, or native development</li>
+<li><em>Skills</em>: Sensor data, local database, data visualization</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Cross-Platform</h3>
+<ul>
+<li><strong>🍕 Food Delivery App</strong> - Order food with real-time tracking<ul>
+<li><em>Tech Stack</em>: React Native, Node.js, MongoDB, Maps API</li>
+<li><em>Skills</em>: GPS integration, real-time updates, payment processing</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🤖 Machine Learning &amp; AI</h2>
+<h3>Computer Vision</h3>
+<ul>
+<li><p><strong>👁️ Object Detection System</strong> - Identify and classify objects in images</p>
+<ul>
+<li><em>Tech Stack</em>: Python, OpenCV, TensorFlow/PyTorch, YOLO</li>
+<li><em>Skills</em>: Deep learning, image processing, model training</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>😊 Emotion Recognition</strong> - Detect emotions from facial expressions</p>
+<ul>
+<li><em>Tech Stack</em>: Python, OpenCV, TensorFlow, dlib</li>
+<li><em>Skills</em>: Facial landmark detection, CNN, real-time processing</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Natural Language Processing</h3>
+<ul>
+<li><p><strong>🤖 Chatbot with NLP</strong> - Intelligent conversational agent</p>
+<ul>
+<li><em>Tech Stack</em>: Python, NLTK/spaCy, TensorFlow, Dialogflow</li>
+<li><em>Skills</em>: Text preprocessing, intent recognition, response generation</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>📈 Stock Price Predictor</strong> - Predict stock prices using ML algorithms</p>
+<ul>
+<li><em>Tech Stack</em>: Python, Pandas, Scikit-learn, TensorFlow</li>
+<li><em>Skills</em>: Time series analysis, feature engineering, model evaluation</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Advanced AI</h3>
+<ul>
+<li><strong>🎵 Music Generation AI</strong> - Generate music using neural networks<ul>
+<li><em>Tech Stack</em>: Python, TensorFlow/PyTorch, MIDI libraries</li>
+<li><em>Skills</em>: Sequence modeling, RNNs/Transformers, audio processing</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🌐 Backend &amp; APIs</h2>
+<h3>RESTful APIs</h3>
+<ul>
+<li><p><strong>🔐 Authentication Service</strong> - JWT-based user authentication system</p>
+<ul>
+<li><em>Tech Stack</em>: Node.js/Python/Java, JWT, bcrypt, MongoDB/PostgreSQL</li>
+<li><em>Skills</em>: Security, token management, middleware</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>📊 Analytics API</strong> - Track and analyze user behavior</p>
+<ul>
+<li><em>Tech Stack</em>: Node.js, MongoDB, Redis, Chart.js</li>
+<li><em>Skills</em>: Data aggregation, caching, rate limiting</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Microservices</h3>
+<ul>
+<li><strong>🏪 E-commerce Microservices</strong> - Scalable e-commerce backend<ul>
+<li><em>Tech Stack</em>: Docker, Kubernetes, Node.js/Java, MongoDB</li>
+<li><em>Skills</em>: Service decomposition, container orchestration, API gateway</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🎮 Game Development</h2>
+<h3>2D Games</h3>
+<ul>
+<li><p><strong>🐍 Snake Game</strong> - Classic snake game with modern twist</p>
+<ul>
+<li><em>Tech Stack</em>: Python (Pygame), JavaScript (Canvas), Unity</li>
+<li><em>Skills</em>: Game loops, collision detection, score tracking</li>
+<li><em>Difficulty</em>: ⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>👾 Space Invaders Clone</strong> - Retro-style shooting game</p>
+<ul>
+<li><em>Tech Stack</em>: Unity, Godot, or web technologies</li>
+<li><em>Skills</em>: Sprite animation, physics, enemy AI</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>3D Games</h3>
+<ul>
+<li><strong>🧩 3D Puzzle Game</strong> - Interactive 3D puzzle solver<ul>
+<li><em>Tech Stack</em>: Unity, Unreal Engine, or Three.js</li>
+<li><em>Skills</em>: 3D modeling, physics simulation, user interaction</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔒 Cybersecurity</h2>
+<h3>Security Tools</h3>
+<ul>
+<li><p><strong>🔍 Network Scanner</strong> - Scan networks for vulnerabilities</p>
+<ul>
+<li><em>Tech Stack</em>: Python, Nmap, Scapy</li>
+<li><em>Skills</em>: Network protocols, vulnerability assessment</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🔐 Password Manager</strong> - Secure password storage and generation</p>
+<ul>
+<li><em>Tech Stack</em>: Python/Java, encryption libraries, SQLite</li>
+<li><em>Skills</em>: Cryptography, secure storage, key derivation</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Penetration Testing</h3>
+<ul>
+<li><strong>🕷️ Web Vulnerability Scanner</strong> - Automated web security testing<ul>
+<li><em>Tech Stack</em>: Python, BeautifulSoup, requests</li>
+<li><em>Skills</em>: Web scraping, security testing, automation</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🗄️ Database Projects</h2>
+<h3>Database Design</h3>
+<ul>
+<li><p><strong>🏥 Hospital Management System</strong> - Complete patient and staff management</p>
+<ul>
+<li><em>Tech Stack</em>: MySQL/PostgreSQL, Java/Python, web framework</li>
+<li><em>Skills</em>: Database normalization, complex queries, reporting</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>📚 Library Management System</strong> - Book inventory and lending system</p>
+<ul>
+<li><em>Tech Stack</em>: Any database, backend framework</li>
+<li><em>Skills</em>: CRUD operations, relationships, transaction management</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Big Data</h3>
+<ul>
+<li><strong>📊 Data Warehouse</strong> - ETL pipeline for business intelligence<ul>
+<li><em>Tech Stack</em>: Apache Spark, Hadoop, PostgreSQL, Python</li>
+<li><em>Skills</em>: Data modeling, ETL processes, query optimization</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>☁️ Cloud &amp; DevOps</h2>
+<h3>Cloud Applications</h3>
+<ul>
+<li><strong>📤 Cloud File Storage</strong> - Dropbox-like file sharing service<ul>
+<li><em>Tech Stack</em>: AWS S3, Node.js, React, Docker</li>
+<li><em>Skills</em>: Cloud services, file handling, scalability</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>DevOps Pipeline</h3>
+<ul>
+<li><strong>🔄 CI/CD Pipeline</strong> - Automated testing and deployment<ul>
+<li><em>Tech Stack</em>: Jenkins, GitHub Actions, Docker, Kubernetes</li>
+<li><em>Skills</em>: Automation, containerization, monitoring</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔗 Blockchain</h2>
+<h3>Cryptocurrency</h3>
+<ul>
+<li><p><strong>💰 Simple Blockchain</strong> - Basic blockchain implementation</p>
+<ul>
+<li><em>Tech Stack</em>: Python, JavaScript, or Go</li>
+<li><em>Skills</em>: Cryptographic hashing, proof of work, peer-to-peer networking</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🪙 Cryptocurrency Wallet</strong> - Send and receive digital currency</p>
+<ul>
+<li><em>Tech Stack</em>: Web3.js, React, Ethereum</li>
+<li><em>Skills</em>: Blockchain interaction, wallet management, smart contracts</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🖥️ Desktop Applications</h2>
+<h3>Productivity Tools</h3>
+<ul>
+<li><p><strong>📝 Code Editor</strong> - Lightweight text editor with syntax highlighting</p>
+<ul>
+<li><em>Tech Stack</em>: Electron, Java (Swing), Python (Tkinter)</li>
+<li><em>Skills</em>: Text processing, syntax parsing, file management</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🎵 Music Player</strong> - Feature-rich audio player</p>
+<ul>
+<li><em>Tech Stack</em>: Java, Python, C++, or Electron</li>
+<li><em>Skills</em>: Audio processing, file formats, user interface design</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>📊 Data Science &amp; Analytics</h2>
+<h3>Visualization</h3>
+<ul>
+<li><strong>📈 Interactive Dashboard</strong> - Real-time data visualization<ul>
+<li><em>Tech Stack</em>: Python (Dash/Streamlit), D3.js, Tableau</li>
+<li><em>Skills</em>: Data visualization, statistical analysis, interactive design</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Analytics</h3>
+<ul>
+<li><strong>🔍 Customer Segmentation</strong> - ML-based customer analysis<ul>
+<li><em>Tech Stack</em>: Python, Pandas, Scikit-learn, Matplotlib</li>
+<li><em>Skills</em>: Clustering algorithms, feature engineering, business intelligence</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🌐 IoT Projects</h2>
+<h3>Smart Home</h3>
+<ul>
+<li><strong>🏠 Home Automation System</strong> - Control lights, temperature, security<ul>
+<li><em>Tech Stack</em>: Raspberry Pi, Arduino, MQTT, Python</li>
+<li><em>Skills</em>: Sensor integration, wireless communication, automation</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Environmental Monitoring</h3>
+<ul>
+<li><strong>🌱 Air Quality Monitor</strong> - Real-time environmental data collection<ul>
+<li><em>Tech Stack</em>: Arduino, sensors, InfluxDB, Grafana</li>
+<li><em>Skills</em>: Sensor programming, data logging, visualization</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🧠 Algorithm Visualizers</h2>
+<h3>Sorting Algorithms</h3>
+<ul>
+<li><strong>🔄 Sorting Visualizer</strong> - Animated sorting algorithm demonstration<ul>
+<li><em>Tech Stack</em>: JavaScript (Canvas), Python (Pygame), Java</li>
+<li><em>Skills</em>: Algorithm implementation, animation, educational design</li>
+<li><em>Difficulty</em>: ⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Graph Algorithms</h3>
+<ul>
+<li><strong>🗺️ Pathfinding Visualizer</strong> - Dijkstra, A*, and BFS visualization<ul>
+<li><em>Tech Stack</em>: JavaScript, Python, or Java with graphics</li>
+<li><em>Skills</em>: Graph theory, algorithm animation, interactive UI</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>📈 Advanced Projects</h2>
+<h3>Distributed Systems</h3>
+<ul>
+<li><strong>🌐 Distributed File System</strong> - Fault-tolerant file storage<ul>
+<li><em>Tech Stack</em>: Go, gRPC, Raft consensus algorithm</li>
+<li><em>Skills</em>: Distributed computing, consensus algorithms, fault tolerance</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>High Performance Computing</h3>
+<ul>
+<li><strong>⚡ Parallel Computing Framework</strong> - Multi-threaded computation engine<ul>
+<li><em>Tech Stack</em>: C++, CUDA, OpenMP, MPI</li>
+<li><em>Skills</em>: Parallel programming, performance optimization, GPU computing</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🎓 Academic Projects</h2>
+<h3>Final Year Projects</h3>
+<ul>
+<li><p><strong>🎭 Virtual Reality Campus Tour</strong> - Immersive university experience</p>
+<ul>
+<li><em>Skills</em>: VR development, 3D modeling, user experience design</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+<li><p><strong>🧬 Bioinformatics Analysis Tool</strong> - DNA/RNA sequence analysis</p>
+<ul>
+<li><em>Skills</em>: Biological algorithms, data processing, scientific computing</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<h3>Research Projects</h3>
+<ul>
+<li><strong>🔬 Research Paper Recommendation System</strong> - ML-based paper discovery<ul>
+<li><em>Skills</em>: Natural language processing, recommendation algorithms, academic databases</li>
+<li><em>Difficulty</em>: ⭐⭐⭐⭐⭐</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🏆 Competition Projects</h2>
+<h3>Hackathon Ideas</h3>
+<ul>
+<li><strong>🌍 Climate Change Predictor</strong> - Environmental data analysis and prediction</li>
+<li><strong>🏥 Healthcare Chatbot</strong> - AI-powered medical assistance</li>
+<li><strong>📱 Accessibility App</strong> - Technology for disabled users</li>
+<li><strong>🚗 Smart Traffic Management</strong> - IoT-based traffic optimization</li>
+</ul>
+<h3>Programming Contests</h3>
+<ul>
+<li><strong>🧮 Algorithm Challenges</strong> - Competitive programming solutions</li>
+<li><strong>🎯 Code Golf</strong> - Shortest code solutions</li>
+<li><strong>🚀 Performance Optimization</strong> - Efficiency-focused implementations</li>
+</ul>
+<hr>
+<h2>📝 How to Contribute</h2>
+<p>Contributions are welcome! Please read our <a href="CODE_OF_CONDUCT.md">Code of Conduct</a> and <a href="CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+<h2>📜 License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<h2>📖 Changelog</h2>
+<p>All notable changes are documented in the <a href="CHANGELOG.md">CHANGELOG</a>.</p>
+<!-- End of README -->
+
+<hr>
+<div align="center">
+  <h3>🚀 Happy Coding! 🚀</h3>
+  <p>Made with ❤️ for the CSE community</p>
+</div>
+
+        </article>
+    </div>
+    
+    <!-- Back to top button -->
+    <button class="back-to-top" onclick="scrollToTop()" title="Back to top">↑</button>
+    
+    <script>
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Add external link indicators
+        document.addEventListener('DOMContentLoaded', function() {
+            const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
+            externalLinks.forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+                link.innerHTML += ' ↗';
+            });
+        });
+        
+        // Loading states for dynamic content
+        function showLoading(element) {
+            element.innerHTML = '<span class="loading"></span> Loading...';
+        }
+        
+        // Copy code block functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const codeBlocks = document.querySelectorAll('pre code');
+            codeBlocks.forEach(block => {
+                const button = document.createElement('button');
+                button.textContent = 'Copy';
+                button.style.cssText = 'position: absolute; top: 5px; right: 5px; background: var(--accent-color); color: white; border: none; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;';
+                
+                const wrapper = block.parentElement;
+                wrapper.style.position = 'relative';
+                wrapper.appendChild(button);
+                
+                button.addEventListener('click', () => {
+                    navigator.clipboard.writeText(block.textContent).then(() => {
+                        button.textContent = 'Copied!';
+                        setTimeout(() => {
+                            button.textContent = 'Copy';
+                        }, 2000);
+                    });
+                });
+            });
+        });
+        
+        // Search functionality (basic)
+        function addSearchFunctionality() {
+            const searchInput = document.createElement('input');
+            searchInput.type = 'text';
+            searchInput.placeholder = 'Search projects...';
+            searchInput.style.cssText = 'width: 100%; max-width: 400px; padding: 10px; margin: 20px 0; background: var(--hover-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-color); font-size: 16px;';
+            
+            const container = document.querySelector('.container');
+            container.insertBefore(searchInput, container.firstChild);
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const sections = document.querySelectorAll('h3, h4');
+                
+                sections.forEach(section => {
+                    const text = section.textContent.toLowerCase();
+                    const nextElement = section.nextElementSibling;
+                    
+                    if (searchTerm === '' || text.includes(searchTerm)) {
+                        section.style.display = 'block';
+                        if (nextElement && nextElement.tagName === 'UL') {
+                            nextElement.style.display = 'block';
+                        }
+                    } else {
+                        section.style.display = 'none';
+                        if (nextElement && nextElement.tagName === 'UL') {
+                            nextElement.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Initialize search
+        // addSearchFunctionality();
+        
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            console.log('Page load time:', loadTime + 'ms');
+        });
+    </script>
+</body>
+</html>
