@@ -3,16 +3,6 @@
 >  **The Ultimate Collection** of Computer Science & Engineering projects - curated for students, developers, and tech enthusiasts. From beginner-friendly tutorials to advanced research projects across **17+ domains** with **100+ project ideas**.
 
 <div align="center">
-  
-  **🔥 Trending Now** • **⭐ 10k+ Stars Goal** • **🌟 Featured Projects** • **📚 Learning Paths**
-  
-  <img src="https://img.shields.io/github/stars/harshpreet931/awesome-cse-projects?style=for-the-badge&logo=github&color=gold&label=⭐%20STARS" alt="GitHub stars">
-  <img src="https://img.shields.io/github/forks/harshpreet931/awesome-cse-projects?style=for-the-badge&logo=github&color=blue&label=🍴%20FORKS" alt="GitHub forks">
-  <img src="https://img.shields.io/github/contributors/harshpreet931/awesome-cse-projects?style=for-the-badge&logo=github&color=green&label=👥%20CONTRIBUTORS" alt="Contributors">
-  <img src="https://img.shields.io/github/issues-pr-closed/harshpreet931/awesome-cse-projects?style=for-the-badge&color=purple&label=✅%20MERGED%20PRS" alt="Merged PRs">
-  
-  <br>
-  
   <img src="https://img.shields.io/badge/💻%20Projects-100+-ff6b6b?style=for-the-badge" alt="Projects Count">
   <img src="https://img.shields.io/badge/🏷️%20Categories-17+-4ecdc4?style=for-the-badge" alt="Categories">
   <img src="https://img.shields.io/badge/📈%20Difficulty-Beginner%20to%20Expert-45b7d1?style=for-the-badge" alt="Difficulty Range">
@@ -27,24 +17,23 @@
 ---
 
 ## What Makes This Special?
-
 <table>
 <tr>
 <td width="33%" align="center">
 
-###  **Curated Excellence**
+#### **Curated Excellence**
 Handpicked projects with **clear difficulty ratings**, comprehensive tech stacks, and skills mapping
 
 </td>
 <td width="33%" align="center">
 
-###  **Progressive Learning**
+####  **Progressive Learning**
 Structured paths from **beginner to expert** with interconnected project sequences
 
 </td>
 <td width="33%" align="center">
 
-###  **Real-World Impact**
+#### **Real-World Impact**
 Projects that solve actual problems and build impressive portfolios
 
 </td>
@@ -134,14 +123,6 @@ Projects that solve actual problems and build impressive portfolios
 - [📜 License](#license)
 - [🔒 Security](#security)
 - [📖 Changelog](#changelog)
-
----
-
-## Featured Projects
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=harshpreet931&repo=awesome-cse-projects&theme=radical" alt="Featured Project">
-</div>
 
 ---
 
@@ -500,9 +481,6 @@ Contributions are welcome! Please read our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔒 Security
-
-See our [Security Policy](SECURITY.md) for reporting vulnerabilities.
 
 ## 📖 Changelog
 
