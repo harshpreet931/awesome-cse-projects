@@ -12,12 +12,12 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Updated from v3
       
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4  # Updated from v3
       with:
-        node-version: '16'  # update to match package.json engines
+        node-version: '18.x'  # Updated to match ci.yml and package.json engines
         cache: 'npm'
 
     - name: Install dependencies
