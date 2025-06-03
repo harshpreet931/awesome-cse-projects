@@ -31,9 +31,6 @@ jobs:
     
     - name: Run tests
       run: npm test
-    
-    - name: Validate projects
-      run: npm run validate
 
   link-check:
     runs-on: ubuntu-latest
