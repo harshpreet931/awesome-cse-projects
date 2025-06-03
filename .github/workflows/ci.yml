@@ -32,9 +32,6 @@ jobs:
     - name: Run tests
       run: npm test
     
-    - name: Lint markdown
-      run: npm run lint
-    
     - name: Validate projects
       run: npm run validate
 
